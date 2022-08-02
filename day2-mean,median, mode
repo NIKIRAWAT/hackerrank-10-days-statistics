@@ -1,0 +1,39 @@
+n=int(input())
+a=input()
+x=list(map(int,a.split(" ")))
+
+def mean(x,n):
+    s=0
+    for i in x:
+        s+=i
+    return s/n
+def median(x):
+    l=sorted(x)
+    a=l[(len(l)//2)-1]
+    b=l[len(l)//2]
+    m=(a+b)/2
+    return m
+def mode(x):
+    f=0
+    for i in x:
+        c=0
+        c=x.count(i)
+        if c>f:
+            f=c
+            o=i
+        elif c==f:
+            if i>o:
+                pass
+            else:
+                o=i
+    return o
+print(mean(x,n))
+print(median(x))
+print(mode(x))
+        
+        
+    
+
+    
+    
+   
